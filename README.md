@@ -1,4 +1,4 @@
-# batman
+# NA N-A N/A Batman
 
 `batman` is a package for taking representations of logical values commonly found in qualitative and categorical data, and mapping them to *actual* logical values.
 
