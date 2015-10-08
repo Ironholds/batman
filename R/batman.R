@@ -43,6 +43,6 @@ NULL
 #' to_logical(categorical_values, custom_true = c("Batman"))
 #' 
 #' @export
-to_logical <- function(x, custom_true = c(), custom_false = c()){
+to_logical <- function(x, custom_true = character(), custom_false = character()){
   return(to_logical_(x, custom_true, custom_false))
 }

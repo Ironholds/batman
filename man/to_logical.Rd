@@ -4,7 +4,7 @@
 \alias{to_logical}
 \title{Convert categorical representations of true/false values to a logical}
 \usage{
-to_logical(x, custom_true = c(), custom_false = c())
+to_logical(x, custom_true = character(), custom_false = character())
 }
 \arguments{
 \item{x}{a vector of categorical TRUE/FALSE/NA values.}
