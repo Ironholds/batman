@@ -6,15 +6,15 @@
 using namespace Rcpp;
 
 // to_logical_
-LogicalVector to_logical_(std::vector < std::string > x, std::vector < std::string > custom_true, std::vector < std::string > custom_false);
-RcppExport SEXP batman_to_logical_(SEXP xSEXP, SEXP custom_trueSEXP, SEXP custom_falseSEXP) {
+LogicalVector to_logical_(std::vector < std::string > x, std::vector < std::string > trues, std::vector < std::string > falses);
+RcppExport SEXP batman_to_logical_(SEXP xSEXP, SEXP truesSEXP, SEXP falsesSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;
     Rcpp::RNGScope __rngScope;
     Rcpp::traits::input_parameter< std::vector < std::string > >::type x(xSEXP);
-    Rcpp::traits::input_parameter< std::vector < std::string > >::type custom_true(custom_trueSEXP);
-    Rcpp::traits::input_parameter< std::vector < std::string > >::type custom_false(custom_falseSEXP);
-    __result = Rcpp::wrap(to_logical_(x, custom_true, custom_false));
+    Rcpp::traits::input_parameter< std::vector < std::string > >::type trues(truesSEXP);
+    Rcpp::traits::input_parameter< std::vector < std::string > >::type falses(falsesSEXP);
+    __result = Rcpp::wrap(to_logical_(x, trues, falses));
     return __result;
 END_RCPP
 }

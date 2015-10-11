@@ -4,10 +4,15 @@
 \alias{to_logical}
 \title{Convert categorical representations of true/false values to a logical}
 \usage{
-to_logical(x, custom_true = character(), custom_false = character())
+to_logical(x, language = "en", custom_true = character(),
+  custom_false = character())
 }
 \arguments{
 \item{x}{a vector of categorical TRUE/FALSE/NA values.}
+
+\item{language}{the language to use. See \code{get_languages} for the list
+of supported languages. If your language is not supported, you can use
+\code{custom_true} and \code{custom_false} to provide values.}
 
 \item{custom_true}{a vector of values to consider, in addition to the ones
 \code{to_logical} already recognises, TRUE. Empty by default. Note that
@@ -32,7 +37,7 @@ categorical_values <- c("true","t","y","yes","f","no","1")
 to_logical(categorical_values)
 
 # Use a custom specifier
-categorical_values <- c("NA","NA","NA","NA","NA,"NA,"NA","NA","Batman")
+categorical_values <- c("NA","NA","NA","NA","NA","NA","NA","NA","Batman")
 to_logical(categorical_values, custom_true = c("Batman"))
 }
 

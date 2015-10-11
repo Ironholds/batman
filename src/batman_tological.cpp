@@ -40,22 +40,8 @@ LogicalVector batman_tological::to_logical_vector(std::vector < std::string > x)
 batman_tological::batman_tological(std::vector < std::string > custom_true,
                                    std::vector < std::string > custom_false){
   
-  // Possible true values
-  true_vals.insert("y");
-  true_vals.insert("yes");
-  true_vals.insert("t");
-  true_vals.insert("true");
-  true_vals.insert("1");
-  
-  // Possible false values
-  false_vals.insert("n");
-  false_vals.insert("no");
-  false_vals.insert("f");
-  false_vals.insert("false");
-  false_vals.insert("none");
-  false_vals.insert("0");
-  
-  // Handle possible custom values.
+  // Handle possible custom values and language
+  // values.
   unsigned int true_size = custom_true.size();
   if(true_size){
     for(unsigned int i = 0; i < true_size; i++){

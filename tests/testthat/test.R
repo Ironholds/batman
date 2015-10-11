@@ -6,10 +6,17 @@ test_that("Simple logicals (including NAs) can be handled", {
 
 test_that("Custom logical can be handled", {
   expect_that(to_logical(c("true","t","y","none","flkargfs","blargh"),
-                         "blargh"), equals(c(TRUE, TRUE, TRUE, FALSE, NA, TRUE)))
+                         custom_true = "blargh"), equals(c(TRUE, TRUE, TRUE, FALSE, NA, TRUE)))
 })
 
 test_that("Custom logical can be handled", {
   expect_that(to_logical(c("true","t","y","none","flkargfs","blargh"),
                         custom_false = "blargh"), equals(c(TRUE, TRUE, TRUE, FALSE, NA, FALSE)))
+})
+
+test_that("Language codes can be retrieved", {
+  
+  result <- get_languages()
+  expect_that(is.vector(result, mode = "character"), equals(TRUE))
+  expect_that("en" %in% result, equals(TRUE))
 })

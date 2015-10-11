@@ -4,7 +4,7 @@ Version: 0.0.1
 Author: Oliver Keyes
 Maintainer: Oliver Keyes <ironholds@gmail.com>
 Description: Survey systems and other third-party data sources commonly use non-standard representations of logical values when it comes to qualitative data - "Yes", "No" and "N/A", say. batman is a package designed to seamlessly convert these into logicals.
-License: Other
+License: MIT + file LICENSE
 LazyData: true
 URL: https://github.com/ironholds/batman
 BugReports: https://github.com/ironholds/batman/issues
