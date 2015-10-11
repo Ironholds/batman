@@ -6,9 +6,9 @@
 \alias{batman-package}
 \title{Convert categorical representations of logicals to actual logicals}
 \description{
-Survey systems and other third-party data sources commonly use non-standard representations of logical values
-when it comes to qualitative data - "Yes", "No" and "N/A", say. batman is a package designed to seamlessly convert these into
-actual logical values.
+Survey systems and other third-party data sources commonly use non-standard
+representations of logical values when it comes to qualitative data - "Yes", "No" and "N/A", say.
+batman is a package designed to seamlessly convert these into actual logical values.
 }
 \seealso{
 \code{to_logical}
