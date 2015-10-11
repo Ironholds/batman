@@ -1,7 +1,7 @@
 Package: batman
 Title: Convert categorical representations of logicals to actual logicals
 Version: 0.0.1
-Author: Oliver Keyes [aut, cre], Ruben C. Arslan [ctb]
+Author: Oliver Keyes [aut, cre], Ruben C. Arslan [ctb], Christopher Akiki [ctb]
 Maintainer: Oliver Keyes <ironholds@gmail.com>
 Description: Survey systems and other third-party data sources commonly use non-standard representations of logical values when it comes to qualitative data - "Yes", "No" and "N/A", say. batman is a package designed to seamlessly convert these into logicals.
 License: MIT + file LICENSE
