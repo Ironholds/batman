@@ -22,7 +22,7 @@ This is nice and all, but when you throw it into R...
 The goal is to have it not only provide this functionality, but provide this functionality in an internationalised way -
 with support for as many languages as possible. If you're interested in contributing localised equivalents to TRUE or FALSE
 values, please open a [GitHub isuse](https://github.com/Ironholds/batman/issues) with your translations! You'll
-be credited in the DESCRIPTION file.
+be credited in the DESCRIPTION file. See the [contribution guidelines](https://github.com/Ironholds/batman/blob/master/CONTRIBUTING.md).
 
 Please note that this project is released with a [Contributor Code of Conduct](https://github.com/Ironholds/batman/blob/master/CONDUCT.md). By participating in this project
 you agree to abide by its terms.
