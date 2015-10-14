@@ -20,3 +20,8 @@ test_that("Language codes can be retrieved", {
   expect_that(is.vector(result, mode = "character"), equals(TRUE))
   expect_that("en" %in% result, equals(TRUE))
 })
+
+test_that("Logicals in non-english languages can be handled", {
+  values <- c("true","blargh","flargh", NA, "不對")
+  expect_that(to_logical(values, language = "zh"), equals(c(NA,NA,NA,NA,FALSE)))
+})
