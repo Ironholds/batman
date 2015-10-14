@@ -32,7 +32,7 @@ you agree to abide by its terms.
 `batman` isn't on CRAN yet (it works perfectly, we'd just like more translations), so installation consists of:
 
     > library(devtools)
-    > install_github("ironholds/batman")
+    > install_github("ironholds/batman", ref = "0.1.0")
 
 # Dependencies
 
