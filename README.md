@@ -29,10 +29,9 @@ you agree to abide by its terms.
 
 # Installation
 
-`batman` isn't on CRAN yet (it works perfectly, we'd just like more translations), so installation consists of:
+`batman` is on CRAN: installation consists of:
 
-    > library(devtools)
-    > install_github("ironholds/batman", ref = "0.1.0")
+    install.packages("batman")
 
 # Dependencies
 
