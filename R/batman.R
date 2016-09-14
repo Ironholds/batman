@@ -7,8 +7,6 @@
 #' 
 #' @seealso \code{to_logical}
 #' 
-#' @useDynLib batman
-#' @importFrom Rcpp sourceCpp
 #' @docType package
 #' @name batman
 NULL
@@ -24,7 +22,7 @@ NULL
 #' 
 #' @param x a vector of categorical TRUE/FALSE/NA values.
 #' 
-#' @param language the language to use. See \code{get_languages} for the list
+#' @param language the language to use. See \code{\link{get_languages}} for the list
 #' of supported languages. If your language is not supported, you can use
 #' \code{custom_true} and \code{custom_false} to provide values.
 #' 
@@ -42,26 +40,37 @@ NULL
 #' categorical_values <- c("true","t","y","yes","f","no","1")
 #' to_logical(categorical_values)
 #' 
-#' # Use a custom specifier
+#' # Use a custom specifier, too
 #' categorical_values <- c("NA","NA","NA","NA","NA","NA","NA","NA","Batman")
 #' to_logical(categorical_values, custom_true = c("Batman"))
 #' 
 #' @export
 to_logical <- function(x, language = "en", custom_true = character(), custom_false = character()){
   
-  # Grab the language-specific values. If they don't exist,
-  # are there custom values? If so, warn and use those. If
-  # not, stop.
-  values <- batman::categorical_booleans[[language]]
-  if(is.null(values)){
+  values <- batman::categorical_booleans[
+    batman::categorical_booleans$language == language,
+  ]
+  if(!nrow(values)){
     if(length(custom_true) && length(custom_false)){
       warning("We have no true/false equivalents for the language you selected - relying entirely on custom_true and custom_false")
-      values <- list(true = character(), false = character())
+      values <- data.frame(cat = c(custom_true, custom_false),
+                           value = c(rep(TRUE, length(custom_true)),
+                                     rep(FALSE, length(custom_false))),
+                           stringsAsFactors = FALSE)
     } else {
       stop("We have no true/false equivalents for the language you selected, and custom values have not been provided. See ?to_logical")
     }
+  } else {
+    if(length(custom_true) || length(custom_false)){
+      values <- rbind(values,
+                      data.frame(language = "language",
+                                 cat = c(custom_true, custom_false),
+                                         value = c(rep(TRUE, length(custom_true)),
+                                                   rep(FALSE, length(custom_false))),
+                                 stringsAsFactors = FALSE)
+      )
+    }
   }
   
-  # Run
-  return(to_logical_(x, trues = c(values$true, custom_true), falses = c(values$false, custom_false)))
+  return(values$value[match(tolower(x), values$cat)])
 }

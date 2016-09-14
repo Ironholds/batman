@@ -6,3 +6,4 @@
 ^appveyor.yml$
 ^CONDUCT\.md$
 ^CONTRIBUTING\.md$
+*.DS_Store

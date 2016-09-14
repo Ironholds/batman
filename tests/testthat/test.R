@@ -4,7 +4,7 @@ test_that("Simple logicals (including NAs) can be handled", {
   expect_that(to_logical(c("true","t","y","none","flkargfs")), equals(c(TRUE, TRUE, TRUE, FALSE, NA)))
 })
 
-test_that("Custom logical can be handled", {
+test_that("Custom logicals can be handled", {
   expect_that(to_logical(c("true","t","y","none","flkargfs","blargh"),
                          custom_true = "blargh"), equals(c(TRUE, TRUE, TRUE, FALSE, NA, TRUE)))
 })

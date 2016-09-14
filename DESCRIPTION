@@ -1,20 +1,23 @@
 Package: batman
 Title: Convert categorical representations of logicals to actual logicals
-Version: 0.1.0
-Date: 2015-10-13
-Author: Oliver Keyes [aut, cre], Ruben C. Arslan [ctb], Christopher Akiki [ctb], Mine Cetinkaya-Rundel [ctb], Peter Meissner [ctb],
-        Ilaria Prosdocimi [ctb], Thomas Leeper [ctb], Amy Lee [ctb], Adolfo Álvarez [ctb]
+Version: 0.2.0
+Date: 2016-09-14
+Author: Oliver Keyes [aut, cre], Ruben C. Arslan [ctb], Christopher Akiki [ctb],
+    Mine Cetinkaya-Rundel [ctb], Peter Meissner [ctb], Ilaria Prosdocimi [ctb],
+    Thomas Leeper [ctb], Amy Lee [ctb], Adolfo Álvarez [ctb]
 Maintainer: Oliver Keyes <ironholds@gmail.com>
-Description: Survey systems and other third-party data sources commonly use non-standard representations of logical values when
-    it comes to qualitative data - "Yes", "No" and "N/A", say. batman is a package designed to seamlessly convert these into logicals.
-    It is highly localised, and contains equivalents to boolean values in languages including German, French, Spanish, Italian,
-    Turkish, Chinese and Polish.
+Description: Survey systems and other third-party data sources commonly use non-
+    standard representations of logical values when it comes to qualitative data -
+    "Yes", "No" and "N/A", say. batman is a package designed to seamlessly convert
+    these into logicals. It is highly localised, and contains equivalents to boolean
+    values in languages including German, French, Spanish, Italian, Turkish, Chinese
+    and Polish.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/ironholds/batman
 BugReports: https://github.com/ironholds/batman/issues
-Suggests: 
+Suggests:
     testthat
-LinkingTo: Rcpp
-Imports: Rcpp
+RoxygenNote: 5.0.1
+Depends: R (>= 2.10)

@@ -1,0 +1,8 @@
+0.2.0
+===================
+* Refactored to be (a) faster and (b) not dependent on Rcpp
+* Confirmed to work at 36,000 feet above the earth's surface
+
+0.1.0
+===================
+* Initial release

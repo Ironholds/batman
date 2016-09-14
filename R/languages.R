@@ -4,11 +4,11 @@
 #' @description A dataset containing the equivalents of TRUE or FALSE in
 #' categorical or user-submitted data, localised to various languages
 #'
-#' @format A list of named lists, each one containing
-#' two columns:
+#' @format A data.frame of three columns:
 #' \describe{
-#'   \item{true}{a character vector of equivalents to TRUE}
-#'   \item{false}{a character vector of equivalents to FALSE}
+#'   \item{language}{a two-letter language code vector of equivalents to TRUE;}
+#'   \item{cat}{the actual categorical variable in that language;}
+#'   \item{value}{the value (TRUE or FALSE) that \code{cat} represents.}
 #' }
 #' 
 #' @seealso \code{\link{to_logical}}, which uses this dataset, and
@@ -30,5 +30,5 @@
 #'
 #'@export
 get_languages <- function(){
-  return(names(batman::categorical_booleans))
+  return(unique(batman::categorical_booleans$language))
 }
